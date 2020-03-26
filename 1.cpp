@@ -3,9 +3,9 @@
 #include <time.h>
 int main()
 {
-    int x,y,z,t;    //å®šä¹‰ä¸¤ä¸ªæ“ä½œæ•°x,yï¼Œç»“æœzï¼Œè¾“å…¥ç»“æœt
-    char k;         //è¿ç®—ç¬¦kå¯å–â€œï¼‹ã€ï¼ã€Ã—ã€Ã·â€
-    int i,sum=0;    //é¢˜ç›®æ•°é‡i,ç­”å¯¹æ•°ç›®sum
+    int x,y,z,t;   
+    char k;         
+    int i,sum=0;    
     srand(time(0));
 
 	printf("Ğ¡Ñ§100ÒÔÄÚËÄÔòÔËËãÁ·Ï°Ìâ£¡£¡\n"); 
@@ -27,3 +27,21 @@ int main()
             }
             printf("%d + %d = ",x,y);
             break;
+        case 1:
+            if(x<y)             //±»¼õÊı´óÓÚ¼õÊı
+            {
+                z=x;
+                x=y;
+                y=z;
+            }
+            z=x-y;
+            printf("%d - %d = ",x,y);
+            break;
+        case 2:
+            while((z=x*y)>100)    //±£Ö¤»ıĞ¡ÓÚ100
+            {
+                x=rand()%100+1;
+                y=rand()%100+1;
+            }
+            printf("%d ¡Á %d = ",x,y);
+            break;    
