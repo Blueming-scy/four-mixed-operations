@@ -3,10 +3,10 @@
 #include <time.h>
 int main()
 {
-    int x,y,z,t;   
-    char k;         
-    int i,sum=0;    
-    srand(time(0));
+    int x,y,z,t;    //定义两个操作数x,y，结果z，输入结果t
+    char k;         //运算符k可取“＋、－、×、÷”
+    int i,sum=0;    //题目数量i,答对数目sum
+    srand(time(0)); 
 
 	printf("小学100以内四则运算练习题！！\n"); 
     for(i=0;i<10;i++)
@@ -45,3 +45,26 @@ int main()
             }
             printf("%d × %d = ",x,y);
             break;    
+		case 3:
+            if(x<y)           //被除数必须大于除数
+            {
+                z=x;
+                x=y;
+                y=z;
+            }
+            x=(x/y)*y;      //保证整除
+            z=x/y;
+            printf("%d ÷ %d = ",x,y);
+            break;
+        }
+        /**< 输入你的计算结果 */
+        scanf("%d",&t);
+        if(z==t)
+        {
+            sum++;
+            printf("正确\n");
+        }
+        else
+            printf("错误\n");
+
+    }
