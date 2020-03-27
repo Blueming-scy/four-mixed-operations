@@ -68,3 +68,13 @@ int main()
             printf("错误\n");
 
     }
+    /**< 输出答对题数和得分 */
+    printf("答对 %d 题，得分：%d\n",sum,sum*10);
+    if(sum<=6)
+        printf("错误较多，请继续努力！\n");
+    else if(sum<=9) 
+        printf("加油，你会做得更好！\n");
+    else
+        printf("你真棒！！！") ; 
+    return 0;
+}
